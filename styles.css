@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face { 
+    font-family: 'ChRisTmAs KiTcHeN'; 
+    src: 
+        url('ChRisTmAs KiTcHeN.otf')  
+        format('opentype');
+}
+
+body {
+    background: url("cork.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+    margin: 5%; 
+    padding-top: 8%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold !important;
+}
+
+navbar {
+    width: 100%;
+    background: url("yellow-pad.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.25);
+    *{margin: 1%}
+    .navbar-brand {
+        width: 20%;
+        transition: .25s;
+        img {
+            content: url("justjammin\ logo\ official.png");
+            width: 100%;
+        }
+    }
+    .navbar-brand:hover, .navbar-brand:active {
+        img {
+            content: url("justjammin\ logo\ outlined.png")
+        }
+    }
+    .btn-nav {
+        margin: 1% 2%;
+        padding: .5%;
+        width: 5%;
+        background-color: #d41d1d;
+        border: 5px solid #d41d1d;
+        color: #f6f5aa;
+        transition: .25s;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .btn-nav:hover {
+        background-color: #f6f5aa;
+        border: 5px solid #d41d1d;
+        color: #d41d1d;
+    }
+}
+
+.row {position: relative;}
+
+.card-header {
+    position: absolute;
+    background-color: none;
+    width: max-content;
+    border: none;
+    font-family: "ChRisTmAs KiTcHeN", Brush Script MT, cursive !important;
+    font-size: 2em !important;
+}
+.card-img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    object-position: top;
+}
+.card-body {
+    background-color: rgba(255,255,255,.75);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    line-height: normal !important;
+    transition: .25s ease;
+    a {font-weight: bold;}
+}
+.card-body:hover {
+    opacity: 1;
+}
+
+button {
+    font-weight: bold !important;
+    transition: .25s !important;
+}
+button:hover {box-shadow: 0 0 2px 2px rgba(0,0,0,.25);}
+button:active {filter: brightness(.8);}
+
+@media screen and (max-width: 960px) {
+    body {padding-top: 17.5%;}
+    .navbar-brand {width: 30% !important;}
+    .card-img {height: 40vw;}
+    .btn-nav {
+        width: 15% !important;
+        padding: 1% !important;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {padding-top: 22.5%;}
+    navbar {
+        background-image: none;
+        box-shadow: none;
+    }
+    .navbar-brand {width: 40% !important;}
+    .card-body {
+        position: initial;
+        opacity: 1;
+    }
+}
