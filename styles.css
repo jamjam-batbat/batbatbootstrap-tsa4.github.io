@@ -28,7 +28,7 @@ navbar {
     box-shadow: 0 0 10px 10px rgba(0,0,0,.25);
     *{margin: 1%}
     .navbar-brand {
-        width: 20%;
+        width: 15%;
         transition: .25s;
         img {
             content: url("justjammin\ logo\ official.png");
@@ -42,7 +42,7 @@ navbar {
     }
     .btn-nav {
         margin: 1% 2%;
-        padding: .5%;
+        padding: .05%;
         width: 5%;
         background-color: #d41d1d;
         border: 5px solid #d41d1d;
@@ -63,31 +63,36 @@ navbar {
 .row {position: relative;}
 
 .card-header {
-    position: absolute;
     background-color: none;
-    width: max-content;
     border: none;
     font-family: "ChRisTmAs KiTcHeN", Brush Script MT, cursive !important;
     font-size: 2em !important;
 }
-.card-img {
-    width: 100%;
-    height: 20vw;
-    object-fit: cover;
-    object-position: top;
-}
-.card-body {
-    background-color: rgba(255,255,255,.75);
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    opacity: 0;
-    line-height: normal !important;
-    transition: .25s ease;
-    a {font-weight: bold;}
-}
-.card-body:hover {
-    opacity: 1;
+
+#offers {
+    .card-header {
+        position: absolute;
+        width: max-content;
+    }
+    .card-img {
+        width: 100%;
+        height: 20vw;
+        object-fit: cover;
+        object-position: top;
+    }
+    .card-body {
+        background-color: rgba(255,255,255,.75);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        line-height: normal !important;
+        transition: .25s ease;
+        a {font-weight: bold;}
+    }
+    .card-body:hover {
+        opacity: 1;
+    }
 }
 
 button {
@@ -97,13 +102,46 @@ button {
 button:hover {box-shadow: 0 0 2px 2px rgba(0,0,0,.25);}
 button:active {filter: brightness(.8);}
 
+.modal-title {
+    padding: .5%;
+    font-family: "ChRisTmAs KiTcHeN", Brush Script MT, cursive !important;
+    font-size: 3em !important;
+}
+.modal-header button {margin-right: 1% !important;}
+.modal-footer a {
+    padding: .5% 2% !important;
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+}
+.carousel-inner {
+    height: 0;
+    padding-bottom: 100%;
+    .carousel-item {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+.modal p, select {margin: 1% !important;}
+select {
+    width: 97% !important;
+    font-weight: bold !important;
+}
+
 @media screen and (max-width: 960px) {
     body {padding-top: 17.5%;}
-    .navbar-brand {width: 30% !important;}
-    .card-img {height: 40vw;}
-    .btn-nav {
-        width: 15% !important;
-        padding: 1% !important;
+    .navbar-brand {width: 20% !important;}
+    .btn-nav {width: 10% !important;}
+    .card-img {height: 50vh !important;}
+    .card-body {
+        position: initial;
+        opacity: 1 !important;
     }
 }
 
@@ -113,9 +151,14 @@ button:active {filter: brightness(.8);}
         background-image: none;
         box-shadow: none;
     }
-    .navbar-brand {width: 40% !important;}
-    .card-body {
-        position: initial;
-        opacity: 1;
+    .navbar-brand {
+        margin: 5% !important;
+        width: 30% !important;
+        img {
+            content: url("justjammin\ logo\ outlined.png") !important
+        }
+    }
+    .btn-nav {
+        margin: 5% !important;
     }
 }
