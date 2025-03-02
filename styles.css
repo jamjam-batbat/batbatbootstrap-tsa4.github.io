@@ -108,6 +108,7 @@ button:active {filter: brightness(.8);}
     font-size: 3em !important;
 }
 .modal-header button {margin-right: 1% !important;}
+.modal-body {margin-top: 0 !important;}
 .modal-footer a {
     padding: .5% 2% !important;
     font-size: 1.5em !important;
@@ -128,6 +129,7 @@ button:active {filter: brightness(.8);}
         }
     }
 }
+.modal p {text-align: justify;}
 .modal p, select {margin: 1% !important;}
 select {
     width: 97% !important;
