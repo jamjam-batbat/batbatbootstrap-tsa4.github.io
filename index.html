@@ -16,12 +16,12 @@
         <a class="navbar-brand" href="#">
             <img>
         </a>
-        <a class="btn btn-nav" href="#">
+        <button class="btn btn-nav" onclick="redirect()">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                 <path
                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
             </svg>
-        </a>
+        </button>
     </navbar>
     <div class="container-fluid text-center" id="offers">
         <div class="row gy-5 justify-content-center">
@@ -52,7 +52,7 @@
                     <img src="monochrome/1.png" class="card-img">
                     <div class="card-body">
                         <p class="card-text">A more complete drawing colored in a <i>very</i> limited palette.<br>Less is more, so they're colored with only 1-3 specific colors.</p>
-                        <button class="btn btn-secondary" value="mono">Starts at PHP 640.00/hr</button>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#mono">Starts at PHP 640.00/hr</button>
                     </div>
                 </div>
             </div>
@@ -61,19 +61,29 @@
                     <h5 class="card-header text-bg-danger">Full Color!</h5>
                     <img src="full color/1.png" class="card-img">
                     <div class="card-body">
-                        <p class="card-text">The whole shebang, complete with shading and highlights.<br>Will take a much longer time to complete than usual, though—</p>
-                        <button class="btn btn-danger" value="full">Starts at PHP 860.00/day</button>
+                        <p class="card-text">The whole shebang, with shading and highlights.<br>Will take a much longer time to complete than usual, though—</p>
+                        <button class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#full">Starts at PHP 860.00/day</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3 mb-sm-0">
+                <div class="card">
+                    <h5 class="card-header text-bg-warning">Logos!</h5>
+                    <img src="logos/1.png" class="card-img">
+                    <div class="card-body">
+                        <p class="card-text">Designs that make your business pop out from the rest of its kind!<br>Also because people ask me to do logos a lot.</p>
+                        <button class="btn btn-warning"data-bs-toggle="modal" data-bs-target="#logo">Starts at PHP 500.00</button>
                     </div>
                 </div>
             </div>
         </div>
+       <p style="margin-top: 1%;">©2025<br>Jam "JustJammin" Batbat</p>
     </div>
 
     <div class="modal fade" id="blub" data-bs-backdrop="false">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content">
                 <div class="modal-header text-bg-info ">
-                    <h1 class="modal-title">&nbsp;</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body row g-3">
@@ -118,7 +128,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-info" href="https://www.instagram.com/justjammin528">COMMISSION NOW</a>
+                    <button class="btn btn-info" onclick="redirect()">COMMISSION NOW</button>
                 </div>
             </div>
         </div>
@@ -138,10 +148,10 @@
                                     <img src="sketches/1.png" class="d-block w-100">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="blub doodles/2.png" class="d-block w-100">
+                                    <img src="sketches/2.png" class="d-block w-100">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="blub doodles/3.png" class="d-block w-100">
+                                    <img src="sketches/3.png" class="d-block w-100">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button"
@@ -158,23 +168,194 @@
                     </div>
                     <div class="col-lg-6">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Sketches!</h1>
-                        <select class="form-select">
-                            <option selected>-- COMMISSION OPTIONS --</option>
-                            <option value="1">Outlined (PHP 150.00)</option>
-                            <option value="2">Monochrome (PHP 180.00)</option>
-                            <option value="3">Colored (PHP 200.00)</option>
+                        <p>My sketches are usually just outlines with the framework being visible underneath it. I can't exactly pinpoint how clean my linework usually is in these sketches, but I can assure you that I don't put as much effort into my inking as I do for my more serious illustrations.</p>
+                        <p>Either way, you can also choose a suitable color that I can sketch your commission in!</p>
+                        <p style="font-size:.8em !important;"><i>(NOTE: There is an Additional Character Fee of PHP 100.00 if you want to add one more character. If you want to add more than that, please message the artist about it first.)</i></p>
+                        <select class="form-select border-success text-success">
+                            <option selected class="text-black">-- COMMISSION OPTIONS --</option>
+                            <option value="1">Solo Sketch (PHP 320.00/hr)</option>
+                            <option value="2">Solo Sketch w/ Shading (PHP 370.00/hr)</option>
+                            <option value="3">Duo Sketch (PHP 320.00/hr + PHP 100.00)</option>
+                            <option value="4">Duo Sketch w/ Shading (PHP 370.00/hr + PHP 100.00)</option>
                         </select>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-success" href="https://www.instagram.com/justjammin528">COMMISSION NOW</a>
+                    <button class="btn btn-success" onclick="redirect()">COMMISSION NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mono" data-bs-backdrop="false">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-bg-secondary ">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3">
+                    <div class="col-lg-6 justify-content-center">
+                        <div id="chrome" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="monochrome/1.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="monochrome/2.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="monochrome/3.png" class="d-block w-100">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#chrome" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#chrome" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Monochrome Illustrations!</h1>
+                        <p>My monochrome illustrations are slightly self-explanatory: each character gets drawn and/or colored by applying black and white (and/or a suitable color) in different opacities to give out the illusion of using different colors.</p>
+                        <p>Sometimes, these monochrome pieces might convey the feelings you're going for better than its fully-colored counterparts.</p>
+                        <p style="font-size:.8em !important;"><i>(NOTE: There is an Additional Character Fee of PHP 100.00 if you want to add one more character. If you want to add more than that, please message the artist about it first.)</i></p>
+                        <select class="form-select border-secondary text-secondary">
+                            <option selected class="text-black">-- COMMISSION OPTIONS --</option>
+                            <option value="1">Solo w/ Flat Colors (PHP 640.00/hr)</option>
+                            <option value="2">Solo w/ Colors & Shading (PHP 690.00/hr)</option>
+                            <option value="3">Duo w/ Flat Colors (PHP 640.00/hr + PHP 100.00)</option>
+                            <option value="4">Duo w/ Colors & Shading (PHP 690.00/hr + PHP 100.00)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="redirect()">COMMISSION NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="full" data-bs-backdrop="false">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-bg-danger ">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3">
+                    <div class="col-lg-6 justify-content-center">
+                        <div id="color" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="full color/1.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="full color/2.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="full color/3.png" class="d-block w-100">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#color" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#color" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Full Color Illustrations!</h1>
+                        <p>The drawing's now in full color! These illustrations only have flat colors by default, but you can pay extra for both shading and highlights to get your commission in its full glory!</p>
+                        <p>However, it comes with the hefty cost of me taking a longer time in drawing these kinds of illustrations, as well as the highest prices I have in my line-up.</p>
+                        <p style="font-size:.8em !important;"><i>(NOTE: There is an Additional Character Fee of PHP 100.00 if you want to add one more character. If you want to add more than that, please message the artist about it first.)</i></p>
+                        <select class="form-select border-danger text-danger">
+                            <option selected class="text-black">-- COMMISSION OPTIONS --</option>
+                            <option value="1">Solo w/ Flat Colors (PHP 860.00/hr)</option>
+                            <option value="2">Solo w/ Colors & Shading (PHP 900.00/hr)</option>
+                            <option value="3">Duo w/ Flat Colors (PHP 860.00/hr + PHP 100.00)</option>
+                            <option value="4">Duo w/ Colors & Shading (PHP 900.00/hr + PHP 100.00)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" onclick="redirect()">COMMISSION NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="logo" data-bs-backdrop="false">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header text-bg-warning ">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3">
+                    <div class="col-lg-6 justify-content-center">
+                        <div id="sign" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="logos/1.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="logos/2.png" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="logos/3.png" class="d-block w-100">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#sign" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#sign" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Logos!</h1>
+                        <p>If you want to decide how your approach to advertising for your business works, then making a logo is a good first step to getting your general vibes and aesthetics down!</p>
+                        <p>Would a rustic hand-drawn logo fit your fancy? Or does the sleek appearance of a vector logo entice you? It all depends on you, my friend!</p>
+                        <p style="font-size:.8em !important;"><i>(NOTE: You can get another copy of your logo with a transparent background by paying an extra PHP 50.00 to your original choice. If you want more colored background choices, please message the artist about it first.)</i></p>
+                        <select class="form-select border-warning text-warning">
+                            <option selected class="text-black">-- COMMISSION OPTIONS --</option>
+                            <option value="1">Hand-Drawn w/ Colored Background (PHP 500.00)</option>
+                            <option value="2">Vector w/ Colored Background (PHP 650.00)</option>
+                            <option value="3">Hand-Drawn w/ Transparent Background (PHP 550.00)</option>
+                            <option value="4">Vector w/ Transparent Background (PHP 700.00)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning" onclick="redirect()">COMMISSION NOW</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script>
+        function redirect() {
+            var link = "https://www.instagram.com/justjammin528"
+            if (confirm("This will redirect you to another site.\n("+link+")\n\nDo you really want to go there?"))
+                {location.href = link}
+        }
+    </script>
 </body>
 
 </html>
